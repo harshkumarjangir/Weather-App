@@ -22,11 +22,13 @@ const Input = ({ setQuery, setUnits }) => {
     return (
         <div className="flex flex-row justify-center my-6">
             <div className=" flex flex-row w-3/4 items-center justify-center space-x-4">
-                <form onSubmit={handleSearch} className="w-ful">
-                    <input value={city} onChange={(e) => setCity(e.currentTarget.value)} type="text" placeholder="Search by City Name..." className="text-gray-500 text-xl font-light p-2 w-full shadow-xl capitalize focus:outline-none placeholder:lowercase rounded-md" />
+                <form onSubmit={handleSearch} className="w-full shadow-xl">
+                    <input value={city} onChange={(e) => setCity(e.currentTarget.value)} type="text" placeholder="Search by City Name..." className="w-full text-gray-500 text-xl font-light p-2 capitalize focus:outline-none placeholder:lowercase rounded-md" />
                 </form>
+               
                 <BiSearch size={30} className="cursor-pointer transition ease-out hover:scale-125" onClick={handleSearch} />
                 <BiCurrentLocation size={30} className="cursor-pointer transition ease-out hover:scale-125" onClick={handleCurrentLocation} />
+               
             </div>
 
             <div className="flex flex-row w-1/4 items-center justify-center">

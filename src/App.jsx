@@ -47,8 +47,8 @@ const App = () => {
   }
 
   return (
-    // max-w-screen-lg
-    <div className={`mx-auto max-w-5xl my-4 py-5 px-32 bg-gradient-to-br shadow-xl shadow-gray-400 ${formatBackground()}`}>
+    // max-w-screen-lg md:px-4 md:w-full
+    <div className={`mx-auto  my-4  max-w-screen-lg py-5 px-32 bg-gradient-to-br shadow-xl shadow-gray-400 ${formatBackground()}`}>
       <TopButtons setQuery={setQuery} />
       <Input setQuery={setQuery} setUnits={setUnits} />
 

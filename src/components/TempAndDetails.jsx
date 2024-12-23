@@ -24,8 +24,8 @@ const TempAndDetails = ({
         {
             id: 1,
             Icon: FaThermometerEmpty,
-            title: "Real Feel",
-            value: `${feels_like.toFixed()} °`
+            title: "Feels like",
+            value: `${feels_like.toFixed()} ${units === "metric" ? "°C" : "°F"}`
             // value: "34°"
         },
         {
@@ -59,13 +59,13 @@ const TempAndDetails = ({
             id: 3,
             Icon: MdKeyboardArrowUp,
             title: "High",
-            value: `${temp_max.toFixed()}°`
+            value: `${temp_max.toFixed()} ${units === "metric" ? "°C" : "°F"}`
         },
         {
             id: 4,
             Icon: MdKeyboardArrowDown,
             title: "Low",
-            value: `${temp_min.toFixed()}°`
+            value: `${temp_min.toFixed()} ${units === "metric" ? "°C" : "°F"}`
         }
     ]
 
@@ -79,7 +79,7 @@ const TempAndDetails = ({
             <div className=" flex flex-row items-center justify-between py-3">
                 <img src={icon} alt="weather icon" className="w-20" />
                 {/* <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" className="w-20" /> */}
-                <p className="text-5xl">{`${temp.toFixed()}°`}</p>
+                <p className="text-5xl">{`${temp.toFixed()} ${units === "metric" ? "°C" : "°F"}`}</p>
                 {/* <p className="text-5xl">34°</p> */}
 
                 <div className="flex flex-col space-y-3 items-start">
